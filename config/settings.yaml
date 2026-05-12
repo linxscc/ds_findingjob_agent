@@ -1,0 +1,37 @@
+# 全局配置
+app:
+  name: "DS FindingJob Agent"
+  version: "0.1.0"
+
+# 采集配置
+collector:
+  request_interval: 3          # 请求间隔（秒）
+  request_timeout: 30          # 请求超时（秒）
+  user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+  max_retries: 3
+  retry_delay: 5
+
+# Playwright 配置
+playwright:
+  headless: true
+  wait_until: "networkidle"
+  timeout: 30000
+
+# 筛选配置
+filter:
+  china_only: true             # 仅保留中国境内岗位
+  allow_remote_china: true     # 允许支持中国远程的海外岗位
+
+# MySQL 配置
+database:
+  host: "localhost"
+  port: 3306
+  user: "root"
+  password: "156324"
+  database: "ds_jobs"
+  charset: "utf8mb4"
+
+# 导出配置
+export:
+  output_dir: "./output"
+  default_format: "json"
