@@ -1,0 +1,14 @@
+
+*.pyc
+*.readme
+*.csproj
+*.sln
+*.meta
+*.readme
+
+
+__pycache__/
+.vscode/
+build/
+install/
+log/
